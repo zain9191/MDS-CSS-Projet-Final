@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottom Navigation with Notification</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      padding-bottom: 60px;
+      font-family:Arial;
+    }
+/* Styles for larger screens (>=992px) */
+@media (min-width: 992px) {
+  .Mobile-Menu {
+    display: none !important;
+  }
+
+  .Laptop-Menu {
+    display: flex !important;
+  }
+
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .category-img {
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .col-catigory {
+    width: 25%;
+  }
+}
+
+/* Styles for smaller screens (<992px) */
+@media (max-width: 992px) {
+  .Laptop-Menu {
+    display: none !important;
+  }
+
+  .Mobile-Menu {
+    display: flex !important;
+  }
+}
+
+  </style>
+
+
+</head>
+<body>
+
+
+
+  <!-- Laptop Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-flex Laptop-Menu">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">Music Tickets</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalogue.html">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="panier.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Search Bar Section -->
+    <div class="container mt-2">
+        <form action="#" method="get">
+          <div class="input-group">
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Search for events or artists..."
+              name="query"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+ 
+  <!-- Content -->
+  <div class="container mt-5 pt-4" style="padding-bottom: 80px;">
+    <div class="row g-0">
+      <!-- Image du produit -->
+      <div class="col-md-4">
+        <img src="img/product/product.png" class="img-fluid" style="border-radius: 10px; object-fit: cover; height: 100%;" alt="Produit">      </div>
+      <!-- Contenu du produit -->
+      <div class="col-md-8">
+        <div class="card-body" style="padding-left: 20px;">
+          <br>
+          <h5 class="card-title">Tiakola</h5>
+          <p class="card-text text-muted">Catégorie : Rap</p>
+          <p class="card-text fw-bold" style="font-size: 1.5rem; color: #9416E9;">45 €</p>
+          <p class="card-text">
+            <small class="text-muted">
+              Publié le 27 janvier 2025 à 12h34 • Ville : Paris
+            </small>
+          </p>
+          <p class="card-text">Description :
+            🎤 <strong>Tiakola en concert : Une soirée exceptionnelle à ne pas manquer !</strong> 🎶
+            <br><br>
+            Préparez-vous à vivre une expérience inoubliable avec <strong>Tiakola</strong>, la nouvelle étoile montante du rap et de l’afrobeat français ! Avec des tubes comme <em>"Mélodrame"</em>, <em>"Si j’savais"</em> ou encore ses collaborations incontournables, Tiakola sait captiver son public avec ses mélodies entraînantes et ses paroles percutantes.  
+            <br><br>
+            📅 <strong>Date</strong> : 15 février 2025  
+            📍 <strong>Lieu</strong> : Salle de concert XYZ, Paris  
+            🕗 <strong>Heure d'ouverture des portes</strong> : 19h  
+            <br><br>
+            🎉 Ne tardez pas à réserver, les places partent vite !
+          </p>
+          <!-- Boutons -->
+          <div class="d-flex justify-content-start mt-4">
+            <a href="panier.html" class="btn btn-primary me-2" style="background-color: #9416E9;border: none;">Acheter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+<!-- Mobile Menu -->
+<nav class="navbar navbar-expand navbar-light bg-light fixed-bottom d-md-none Mobile-Menu">
+    <div class="container-fluid justify-content-around">
+      <a href="home.html" class="nav-link text-center">
+        <i class="bi bi-house-door"></i><br>Home
+      </a>
+      <a href="catalogue.html" class="nav-link text-center">
+        <i class="bi bi-grid"></i><br>Catalog
+      </a>
+      <a href="panier.html" class="nav-link text-center">
+        <i class="bi bi-cart position-relative">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            1
+            <span class="visually-hidden">items in cart</span>
+          </span>
+        </i><br>Cart
+      </a>
+      <a href="profile.html" class="nav-link text-center">
+        <i class="bi bi-person"></i><br>Profile
+      </a>
+    </div>
+  </nav>
+ 
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

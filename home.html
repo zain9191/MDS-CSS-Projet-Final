@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Music Tickets</title>
+  <!-- Bootstrap 5.3.0 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      padding-bottom: 60px;
+      font-family:Arial;
+    }
+/* Styles for larger screens (>=992px) */
+@media (min-width: 992px) {
+  .Mobile-Menu {
+    display: none !important;
+  }
+
+  .Laptop-Menu {
+    display: flex !important;
+  }
+
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .category-img {
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .col-catigory {
+    width: 25%;
+  }
+}
+
+/* Styles for smaller screens (<992px) */
+@media (max-width: 992px) {
+  .Laptop-Menu {
+    display: none !important;
+  }
+
+  .Mobile-Menu {
+    display: flex !important;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+
+  <!-- Laptop Menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-flex Laptop-Menu">
+  <div class="container">
+    <a class="navbar-brand" href="home">Music Tickets</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="catalogue.html">Catalog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="panier.html">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Search Bar Section -->
+  <div class="container mt-2">
+    <form action="#" method="get">
+      <div class="input-group">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Search for events or artists..."
+          name="query"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-secondary" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Carousel -->
+  <div
+    id="carouselExampleCaptions"
+    class="carousel slide mt-4"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="/img/hero-carousel/first img.png"
+          class="d-block w-100 img-fluid"
+          alt="First Slide"
+        />
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+        <div class="carousel-caption d-flex flex-column justify-content-end align-items-center">
+          <h5>Get Your Tickets</h5>
+          <p>50% Discount</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/img/hero-carousel/second img.png"
+          class="d-block w-100 img-fluid"
+          alt="Second Slide"
+        />
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+        <div class="carousel-caption">
+          <h5>Pick Your Discount</h5>
+          <p>Best Prices</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/img/hero-carousel/3rd img.png"
+          class="d-block w-100 img-fluid"
+          alt="Third Slide"
+        />
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+        <div class="carousel-caption">
+          <h5>Get Your Match Tickets</h5>
+          <p>Today's Match</p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mt-5 text-center">
+    <h1>Find Your Next Live Music Experience</h1>
+    <p>Browse and secure your tickets for upcoming events today.</p>
+  </div>
+
+  <!-- Upcoming Events Section -->
+  <div class="container mt-5">
+    <h2 class="mb-4">Upcoming Events</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <!-- Event Card 1 -->
+      <div class="col col-catigory">
+        <div class="card h-100">
+          <img
+            src="/img/upcomming events/first.png"
+            class="card-img-top img-fluid"
+            alt="Event 1"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Traci Harmonie</h5>
+            <p class="card-text">
+              Date: February 2025<br>
+              Location: Orlando Florida Events
+            </p>
+            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none;">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 2 -->
+      <div class="col col-catigory">
+        <div class="card h-100">
+          <img
+            src="/img/upcomming events/second.png"
+            class="card-img-top img-fluid"
+            alt="Event 2"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Victoria Cantik</h5>
+            <p class="card-text">
+              Date: April 10, 2025<br>
+              Location: Arena, Los Angeles
+            </p>
+            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none;">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 3 -->
+      <div class="col col-catigory">
+        <div class="card h-100">
+          <img
+            src="/img/upcomming events/beforLast.png"
+            class="card-img-top img-fluid"
+            alt="Event 3"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Muse Philadelphia</h5>
+            <p class="card-text">
+              Date: Feb 23, 2025<br>
+              Location: Arena, Los Angeles
+            </p>
+            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none;">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 4 -->
+      <div class="col col-catigory">
+        <div class="card h-100">
+          <img
+            src="/img/upcomming events/last.png"
+            class="card-img-top img-fluid"
+            alt="Event 4"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Classical Music Festival</h5>
+            <p class="card-text">
+              Date: Feb 23, 2025<br>
+              Location: Arena, Paris
+            </p>
+            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none;">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories Section -->
+  <div class="container mt-5">
+    <h2 class="mb-4" >Categories</h2>
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <!-- Category Card 1 -->
+      <div class="col">
+        <div class="card text-center">
+          <img
+            src="/img/catigories/rock.png"
+            class="card-img-top img-fluid category-img"
+            alt="Rock"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Rock</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Category Card 2 -->
+      <div class="col">
+        <div class="card text-center">
+          <img
+            src="/img/catigories/pop.png"
+            class="card-img-top img-fluid category-img"
+            alt="Pop"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Pop</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Category Card 3 -->
+      <div class="col">
+        <div class="card text-center">
+          <img
+            src="/img/catigories/jazz.png"
+            class="card-img-top img-fluid category-img"
+            alt="Jazz"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Jazz</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Category Card 4 -->
+      <div class="col">
+        <div class="card text-center">
+          <img
+            src="/img/catigories/rap.png"
+            class="card-img-top img-fluid category-img"
+            alt="Rap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Rap</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter Section -->
+  <div class="container mt-5">
+    <div class="p-5 bg-light rounded-3">
+      <h3 class="mb-3">Stay Updated</h3>
+      <p class="mb-4">Subscribe to our newsletter for the latest news on upcoming concerts and special offers.</p>
+      <form>
+        <div class="input-group">
+          <input 
+            type="email" 
+            class="form-control" 
+            placeholder="Enter your email" 
+            aria-label="Email"
+          />
+          <button class="btn btn-dark" type="submit" style="background-color: #BD66F6;border: none;">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 Music Tickets Inc. All rights reserved.</p>
+      <div class="d-flex justify-content-center mt-2">
+        <a href="#" class="text-dark mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<!-- Mobile Menu -->
+<nav class="navbar navbar-expand navbar-light bg-light fixed-bottom d-md-none Mobile-Menu">
+  <div class="container-fluid justify-content-around">
+    <a href="home.html" class="nav-link text-center">
+      <i class="bi bi-house-door"></i><br>Home
+    </a>
+    <a href="catalogue.html" class="nav-link text-center">
+      <i class="bi bi-grid"></i><br>Catalog
+    </a>
+    <a href="panier.html" class="nav-link text-center">
+      <i class="bi bi-cart position-relative">
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          1
+          <span class="visually-hidden">items in cart</span>
+        </span>
+      </i><br>Cart
+    </a>
+    <a href="profile.html" class="nav-link text-center">
+      <i class="bi bi-person"></i><br>Profile
+    </a>
+  </div>
+</nav>
+
+
+
+  <!-- Bootstrap 5.3.0 JS (Popper + Bootstrap) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
