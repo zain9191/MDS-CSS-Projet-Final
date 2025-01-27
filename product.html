@@ -51,7 +51,24 @@
     display: flex !important;
   }
 }
+/* Smooth animation for image and buttons */
+.img-fluid {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+  }
 
+  .img-fluid:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+
+  .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Primary button hover effect */
+  .btn-primary:hover {
+    background-color: #7b0dcf; /* Slightly darker purple */
+    transform: scale(1.1); /* Slight growth */}
   </style>
 
 
@@ -63,7 +80,7 @@
   <!-- Laptop Menu -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-flex Laptop-Menu">
     <div class="container">
-      <a class="navbar-brand" href="home.html">Music Tickets</a>
+        <img src="img/logo.png" href="home" alt="logo">
       <button
         class="navbar-toggler"
         type="button"
@@ -94,24 +111,24 @@
     </div>
   </nav>
   
-    <!-- Search Bar Section -->
-    <div class="container mt-2">
-        <form action="#" method="get">
-          <div class="input-group">
-            <input 
-              type="text" 
-              class="form-control" 
-              placeholder="Search for events or artists..."
-              name="query"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-secondary" type="submit">
-              <i class="bi bi-search"></i>
-            </button>
-          </div>
-        </form>
+  <!-- Search Bar Section -->
+  <div class="container mt-2">
+    <form action="#" method="get">
+      <div class="input-group">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Search for events or artists..."
+          name="query"
+          aria-label="Search"
+          style="border-top-left-radius: 25px; border-bottom-left-radius: 25px;"
+        />
+        <button class="btn btn-outline-secondary" type="submit" style="border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
+          <i class="bi bi-search"></i>
+        </button>
       </div>
-
+    </form>
+  </div>
  
   <!-- Content -->
   <div class="container mt-5 pt-4" style="padding-bottom: 80px;">
@@ -144,7 +161,7 @@
           </p>
           <!-- Boutons -->
           <div class="d-flex justify-content-start mt-4">
-            <a href="panier.html" class="btn btn-primary me-2" style="background-color: #9416E9;border: none;">Acheter</a>
+            <a href="panier.html" class="btn btn-primary me-2" style="background-color: #9416E9;border: none; border-radius: 25px;">Acheter</a>
           </div>
         </div>
       </div>

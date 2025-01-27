@@ -79,6 +79,35 @@
         font-size: 0.875rem;
       }
     }
+    /* Button hover animation */
+  .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Primary button hover effect (e.g., "Edit Profile") */
+  .btn-primary:hover {
+    background-color: #9c3bf6; /* Darker purple */
+    transform: scale(1.1); /* Slight growth */
+  }
+
+  /* Outlined secondary button hover effect (e.g., "Settings") */
+  .btn-outline-secondary:hover {
+    background-color: #6c757d; /* Darker gray */
+    color: white; /* White text on hover */
+    transform: scale(1.1); /* Slight growth */
+  }
+
+  /* Navbar and other buttons consistency */
+  .navbar .nav-link:hover {
+    color: #BD66F6; /* Matches the primary color theme */
+    transform: scale(1.1); /* Slight growth */
+  }
+
+  /* For the "Mes Billets" card interactions */
+  .card .card-header:hover {
+    color: #9c3bf6; /* Changes the text color on hover */
+    transform: scale(1.02); /* Slight growth of the card header */
+  }
   </style>
 </head>
 <body>
@@ -86,7 +115,7 @@
   <!-- Laptop Menu -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-flex Laptop-Menu">
     <div class="container">
-      <a class="navbar-brand" href="home.html">Music Tickets</a>
+      <img src="img/logo.png" href="home" alt="logo">
       <button
         class="navbar-toggler"
         type="button"
@@ -127,8 +156,9 @@
           placeholder="Search for events or artists..."
           name="query"
           aria-label="Search"
+          style="border-top-left-radius: 25px; border-bottom-left-radius: 25px;"
         />
-        <button class="btn btn-outline-secondary" type="submit">
+        <button class="btn btn-outline-secondary" type="submit" style="border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
           <i class="bi bi-search"></i>
         </button>
       </div>
@@ -146,8 +176,8 @@
         <p class="text-muted">@marieee</p>
         <!-- Buttons -->
         <div class="d-flex gap-2 mt-2">
-          <button class="btn btn-primary" style="background-color: #BD66F6;">Edit Profile</button>
-          <button class="btn btn-outline-secondary">Settings</button>
+          <button class="btn btn-primary" style="background-color: #BD66F6; border-radius: 25px;">Edit Profile</button>
+          <button class="btn btn-outline-secondary" style="border-radius: 25px;">Settings</button>
         </div>
       </div>
     </div>

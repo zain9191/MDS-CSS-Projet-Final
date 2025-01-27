@@ -51,6 +51,48 @@
   }
 }
 
+
+
+  /* Card hover animation */
+  .col .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Ensures the image stays inside the card */
+    border-radius: 15px; /* Matches the card design */
+  }
+
+  .col .card:hover {
+    transform: translateY(-10px); /* Lifts the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  }
+
+  /* Image hover animation */
+  .col .card img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Ensures the image doesn't exceed the card width */
+    display: block; /* Prevents any unexpected gaps */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .col .card:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+
+  /* Button hover animation */
+  .col .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #9416e9; /* Default color */
+    color: white;
+    font-weight: bold;
+    border-radius: 25px; /* Matches button design */
+  }
+
+  .col .btn:hover {
+    background-color: #740fcf; /* Darker shade */
+    transform: scale(1.1); /* Enlarges button */
+  }
+
+
   </style>
 
 
@@ -60,8 +102,8 @@
   <!-- Laptop Menu -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-flex Laptop-Menu">
     <div class="container">
-      <a class="navbar-brand" href="home.html">Music Tickets</a>
-      <button
+        <img src="img/logo.png" href="home" alt="logo">
+        <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
@@ -101,14 +143,14 @@
           placeholder="Search for events or artists..."
           name="query"
           aria-label="Search"
+          style="border-top-left-radius: 25px; border-bottom-left-radius: 25px;"
         />
-        <button class="btn btn-outline-secondary" type="submit">
+        <button class="btn btn-outline-secondary" type="submit" style="border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
           <i class="bi bi-search"></i>
         </button>
       </div>
     </form>
   </div>
- 
   <!-- Content -->
   <div class="container mt-5 pt-4" style="padding-bottom: 80px;">
     <h2 class="text-center mb-4">Catalogue de Concerts</h2>
@@ -123,7 +165,7 @@
               Date: April 10, 2025<br>
               Location: Arena, Los Angeles
             </p>
-            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none;">Buy Tickets</a>
+            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none; border-radius: 25px;">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -138,7 +180,7 @@
               Date: April 10, 2025<br>
               Location: Arena, Los Angeles
             </p>
-            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none;">Buy Tickets</a>
+            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none; border-radius: 25px">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -153,7 +195,7 @@
               Date: Feb 23, 2025<br>
               Location: Arena, Los Angeles
             </p>
-            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none;">Buy Tickets</a>
+            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none; border-radius: 25px">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -167,7 +209,7 @@
               Date: Feb 4, 2025<br>
               Location: LDLC Arena, Décines-Charpieu
             </p>
-            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none;">Buy Tickets</a>
+            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none; border-radius: 25px">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -182,7 +224,7 @@
               Date: Feb 12, 2025<br>
               Le Transbordeur, Villeurbanne
             </p>
-            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none;">Buy Tickets</a>
+            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none; border-radius: 25px">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -197,7 +239,7 @@
               Date: Feb 1, 2025<br>
               LDLC Arena, Décines-Charpieu
             </p>
-            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none;">Buy Tickets</a>
+            <a href="#" class="btn btn-primary" style="background-color: #9416E9;border: none; border-radius: 25px">Buy Tickets</a>
           </div>
         </div>
       </div>

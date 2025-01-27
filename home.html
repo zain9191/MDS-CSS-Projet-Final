@@ -58,7 +58,56 @@
     display: flex !important;
   }
 }
+/* Card container hover effect */
+.col-catigory .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures content remains inside the card */
+    border-radius: 15px; /* Smooth corners for the entire card */
+  }
 
+  .col-catigory .card:hover {
+    transform: translateY(-10px); /* Elevates the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  }
+
+  /* Image hover effect */
+  .col-catigory .card img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Ensures the image remains within bounds */
+    display: block; /* Prevents any unexpected margins */
+  }
+
+  .col-catigory .card:hover img {
+    transform: scale(1.05); /* Adds a slight zoom effect */
+  }
+
+  /* Prevent the image from overlapping card text */
+  .col-catigory .card-body {
+    position: relative; /* Keeps text and button properly positioned */
+  }
+
+  /* Button hover effect */
+  .col-catigory .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #bd66f6;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+  }
+
+  .col-catigory .btn:hover {
+    background-color: #9c3bf6; /* Slightly darker purple */
+    transform: scale(1.1); /* Enlarges the button */
+  }
+
+  /* Add hover effect to carousel images */
+.carousel-item img {
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05); /* Slight zoom effect */
+}
   </style>
 </head>
 <body>
@@ -67,7 +116,7 @@
   <!-- Laptop Menu -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-flex Laptop-Menu">
   <div class="container">
-    <a class="navbar-brand" href="home">Music Tickets</a>
+    <img src="img/logo.png" href="home" alt="logo">
     <button
       class="navbar-toggler"
       type="button"
@@ -109,8 +158,9 @@
           placeholder="Search for events or artists..."
           name="query"
           aria-label="Search"
+          style="border-top-left-radius: 25px; border-bottom-left-radius: 25px;"
         />
-        <button class="btn btn-outline-secondary" type="submit">
+        <button class="btn btn-outline-secondary" type="submit" style="border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
           <i class="bi bi-search"></i>
         </button>
       </div>
@@ -227,7 +277,7 @@
               Date: February 2025<br>
               Location: Orlando Florida Events
             </p>
-            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none;">Buy Tickets</a>
+            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none; border-radius: 25px;">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -245,7 +295,7 @@
               Date: April 10, 2025<br>
               Location: Arena, Los Angeles
             </p>
-            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none;">Buy Tickets</a>
+            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none; border-radius: 25px">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -263,7 +313,7 @@
               Date: Feb 23, 2025<br>
               Location: Arena, Los Angeles
             </p>
-            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none;">Buy Tickets</a>
+            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none; border-radius: 25px">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -281,7 +331,7 @@
               Date: Feb 23, 2025<br>
               Location: Arena, Paris
             </p>
-            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none;">Buy Tickets</a>
+            <a href="product.html" class="btn btn-dark" style="background-color: #BD66F6;border: none; border-radius: 25px">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -359,8 +409,9 @@
             class="form-control" 
             placeholder="Enter your email" 
             aria-label="Email"
+            style="border-top-left-radius: 25px; border-bottom-left-radius: 25px;"
           />
-          <button class="btn btn-dark" type="submit" style="background-color: #BD66F6;border: none;">Subscribe</button>
+          <button class="btn btn-dark" type="submit" style="background-color: #BD66F6;border: none; border-top-right-radius: 25px; border-bottom-right-radius: 25px">Subscribe</button>
         </div>
       </form>
     </div>
